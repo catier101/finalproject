@@ -20,11 +20,23 @@ class MyApp < Sinatra::Base
 #     erb :dog    #they will see the dog.erb view
 #   end
   
-  post '/success' do
+  get '/success' do
     #stuff goes here
-    puts params
-    @test = UserPicks.new(params["pick1"],params["pick2"],params["pick3"])
+     puts params
+     @test = UserPicks.new(params["pick1"],params["pick2"],params["pick3"])
     erb :success
+  end
+  
+  get '/error' do
+    erb :error
+  end
+  
+  get '/check' do
+    if @pick1 == true
+      erb :success
+    else
+      erb :error
+    end
   end
 
 end

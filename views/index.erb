@@ -8,7 +8,7 @@
  </head>
  <body>
    <h1>Final Project</h1>
-   <form method="POST" action="/success">
+<!--    <form method="POST" action="/success">
     First Pick:<br>
     <input type="text" name="pick1" placeholder="first pick goes here">
     <br>
@@ -17,8 +17,14 @@
     <br>
      Third Pick:<br>
     <input type="text" name="pick3" placeholder="third pick goes here">
-    <br><br>
-     <input type="submit" value="Submit">
-   </form>
+    <br><br> -->
+   
+   <form action="/check" method="get">
+    <input type="checkbox" name="pick1" value="pick1">This is item 1<br>
+    <input type="checkbox" name="pick2">This is item 2<br>
+    <input type="checkbox" name="pick3">This is item 3<br><br>
+  <input type="submit" value="Submit">
+</form>
+<!--    </form> -->
  </body>
 </html>
