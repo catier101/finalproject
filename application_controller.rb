@@ -6,7 +6,7 @@ require 'bundler'
 Bundler.require
 
 # import local file to be accessed
-require_relative 'models/dog.rb'
+require_relative 'models/userpicks.rb'
 
 class MyApp < Sinatra::Base
 
@@ -14,10 +14,17 @@ class MyApp < Sinatra::Base
     erb :index
   end
   
-  get '/dog' do #when someone goes to my site.com/dog
-    # call methods, make new instances
-    @dog1 = Dog.new("Smush", "corgi", 5)
-    erb :dog    #they will see the dog.erb view
+#   get '/success' do #when someone goes to my site.com/dog
+#     # call methods, make new instances
+#     @dog1 = Dog.new("Smush", "corgi", 5)
+#     erb :dog    #they will see the dog.erb view
+#   end
+  
+  post '/success' do
+    #stuff goes here
+    puts params
+    @test = UserPicks.new(params["pick1"],params["pick2"],params["pick3"])
+    erb :success
   end
 
 end
