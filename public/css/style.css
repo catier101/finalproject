@@ -3,7 +3,12 @@ body {
   background-color:#FECADC; 
 }
 h1 {
+  text-align: center;
   color:#A2A7DE;
   font-family:Open Sans;
+}
+
+#items {
+  background-color:white;
 }
 
