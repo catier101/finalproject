@@ -1,8 +1,9 @@
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+body {
+  background-color:#FECADC; 
+}
 h1 {
-  color:blue;
+  color:#A2A7DE;
   font-family:Open Sans;
 }
-body {
-  background-color:#3F79AB; 
-}
+
