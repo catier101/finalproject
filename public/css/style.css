@@ -6,19 +6,23 @@ body {
 h1 {
   text-align: center;
   color:#FFBDDE;
+  position:relative;
 }
 img {
   border-color: #CC0052;
   width: 200px;
-  height: 200px;
-}
-
-#items {
-  background-color:white;
+  height: 230px;
 }
 
 #infopage {
-  text-align:right;
+  position:absolute;
+  top:5%;
+  left:74%;
+  width:85px;
+  z-index:99;
+  text-align:center;
+  padding:2px;
+  border:1px solid pink;
 }
 
 a {
@@ -28,11 +32,6 @@ a {
 a:visited {
   color:#CC97B2
 }
-
-/* .radio {
-  float:right;
-  margin:20px;
-} */
 
 label {
   margin:20px;
@@ -49,21 +48,26 @@ label {
   left: 226px;
 }
 
+#items {
+  background-color:white;
+  width:900px;
+  position:relative;
+  margin:0 auto;
+}
+
 #items div {
   height:220px;
   position:relative;
 }
 
-/* #items input {
-  float: right;
-  display:block;
-  position: relative;
-  right: 50px;
-  padding-top:50px;
-} */
-
 #items input {
   position:absolute;
   top:100px;
   right:50px;
+}
+
+#info {
+  position:absolute;
+  left:19%;
+  width:400px;
 }
