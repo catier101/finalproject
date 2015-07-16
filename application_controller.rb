@@ -33,8 +33,14 @@ class MyApp < Sinatra::Base
   
   get '/check' do
     @picks = UserPicks.new(params[:pick])
-    if @picks.pick != nil
-      erb :success
+    if @picks.pick == "street harassment"
+      erb :streethar
+    elsif @picks.pick == "domestic violence"
+      erb :domestic
+    elsif @picks.pick == "rape"
+      erb :rape
+    elsif @picks.pick == "other"
+      erb :other
     else
       erb :error
     end
