@@ -14,26 +14,14 @@ class MyApp < Sinatra::Base
     erb :index
   end
   
-#   get '/success' do #when someone goes to my site.com/dog
-#     # call methods, make new instances
-#     @dog1 = Dog.new("Smush", "corgi", 5)
-#     erb :dog    #they will see the dog.erb view
-#   end
-  
-  get '/success' do
-    #stuff goes here
-#      puts params
-#      @test = UserPicks.new(params["pick1"],params["pick2"],params["pick3"])
-    erb :success
-  end
-  
-  get '/error' do
-    erb :error
+  get '/infopage' do
+    erb :infopage
   end
   
   get '/check' do
     @picks = UserPicks.new(params[:pick])
     if @picks.pick == "street harassment"
+      @info = Info.new(params[:name], params[:number])
       erb :streethar
     elsif @picks.pick == "domestic violence"
       erb :domestic

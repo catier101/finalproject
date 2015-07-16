@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="css/style.css" type="text/css">
  </head>
  <body>
-   <h1>Final Project</h1>
+   <h1>Clothing Police</h1>
+   <h3 id="infopage"><a href="infopage">Info Page</a></h3>
 <!--    <form method="POST" action="/success">
     First Pick:<br>
     <input type="text" name="pick1" placeholder="first pick goes here">
@@ -20,20 +21,37 @@
     <br><br> -->
    
     <form action="/check" method="get">
-          <div id = "items">
-    <input id="pick1" name="pick" type="radio" value="street harassment" />
-      <label for="pick1">With Love Dress</label>
+     <div id = "items">
+       <div id = "dress">
+       <img src="images/dress.png" />
+      <label for="pick1">Violet Dress</label>
+       <input id="pick1" name="pick" type="radio" value="street harassment" />
+       </div>
       <br>
-    <input id="pick2" name="pick" type="radio" value="domestic violence"/>
-    <label for="pick2">Shirt</label>
+       <div id="shirt">
+       <img src="images/shirt.png" />
+      <label for="pick2">Sapphire Shirt</label>
+       <input id="pick2" name="pick" type="radio" value="domestic violence"/>
+       </div>
       <br>
+       <div id ="skirt">
+       <img src="images/skirt.png"/>
+       <label for="pick3">Utopia Skirt</label>
       <input id="pick3" name="pick" type="radio" value="rape"/>
-      <label for="pick3">Skirt</label>
+       </div>
       <br>
+       <div id="purse">
+       <img src="images/purse.png"/>
+       <label for="pick4">Forever Purse</label>
       <input id="pick4" name="pick" type="radio" value = "other"/>
-      <label for="pick4">Purse</label>
+       </div>
       </div>
-      <br><input type="submit" value="Submit">
+      <br>
+      Name:<br>
+      <input type="text" name="name">
+      <br>Phone number:<br>
+      <input type="text" name="number">
+      <br><br><input type="submit" value="Submit">
 </form>
 <!--    </form> -->
  </body>

@@ -5,3 +5,11 @@ class UserPicks
     @pick = pick
   end
 end
+
+class Info
+  attr_accessor :name, :number
+  def initialize(name, number)
+    @name = name
+    @number = number
+  end
+end

@@ -1,10 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 body {
-  background-color:#FECADC; 
+  background-color:#FFF9FB; 
 }
 h1 {
   text-align: center;
-  color:#A2A7DE;
+  color:#FFBDDE;
   font-family:Open Sans;
 }
 img {
@@ -17,3 +17,14 @@ img {
   background-color:white;
 }
 
+#infopage {
+  text-align:right;
+}
+
+a {
+  color:#CC97B2;
+}
+
+a:visited {
+  color:#CC97B2
+}
