@@ -7,6 +7,11 @@ h1 {
   color:#A2A7DE;
   font-family:Open Sans;
 }
+img {
+  border-color: #CC0052;
+  width: 200px;
+  height: 200px;
+}
 
 #items {
   background-color:white;
