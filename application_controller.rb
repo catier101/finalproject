@@ -22,8 +22,8 @@ class MyApp < Sinatra::Base
   
   get '/success' do
     #stuff goes here
-     puts params
-     @test = UserPicks.new(params["pick1"],params["pick2"],params["pick3"])
+#      puts params
+#      @test = UserPicks.new(params["pick1"],params["pick2"],params["pick3"])
     erb :success
   end
   
@@ -32,11 +32,12 @@ class MyApp < Sinatra::Base
   end
   
   get '/check' do
-    if @pick1 == true
+       # if role.exists?
+    if params[:pick1] == "on"
       erb :success
-    else
+       else
       erb :error
-    end
+       
+       end
   end
-
 end
