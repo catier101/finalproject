@@ -32,12 +32,11 @@ class MyApp < Sinatra::Base
   end
   
   get '/check' do
-       # if role.exists?
-    if params[:pick1] == "on"
+    @picks = UserPicks.new(params[:pick])
+    if @picks.pick != nil
       erb :success
-       else
+    else
       erb :error
-       
-       end
+    end
   end
 end

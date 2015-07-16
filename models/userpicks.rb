@@ -1,17 +1,17 @@
-require_relative 'shoppingcart.rb'
+# require_relative 'shoppingcart.rb'
 class UserPicks
-  attr_accessor :pick1, :pick2, :pick3
-  def initialize(pick1=true, pick2=false, pick3=false)
-    @pick1 = pick1
-    @pick2 = pick2
-    @pick3 = pick3
+  attr_accessor :pick
+  def initialize(pick)
+    @pick = pick
   end
-  def check
-    if check_box == active
-#     if @pick1 == true
-      erb :success
+#   def check
+#     if !@pick1 && !@pick2
+#       puts "nothing was selected"
+#      elsif !@pick1 && @pick2
+#       puts "pick 2 only was selected"
+#       elsif @pick1 && !@pick2
+#       puts "pick 1 only was selected"
 #     else
-#       erb :error
-     end
-  end
+#       puts "both were selected"
+#      end
 end
