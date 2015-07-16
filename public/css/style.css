@@ -1,11 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Dosis|Open+Sans+Condensed:300);
 body {
-  background-color:#FFF9FB; 
+  background-color:#FFF9FB;
+  font-family:Dosis;
 }
 h1 {
   text-align: center;
   color:#FFBDDE;
-  font-family:Open Sans;
 }
 img {
   border-color: #CC0052;
@@ -27,4 +27,28 @@ a {
 
 a:visited {
   color:#CC97B2
+}
+
+.radio {
+  float:right;
+  margin:20px;
+}
+
+label {
+  margin:20px;
+  font-size:25px;
+  vertical-align:top;
+  width:400px;
+  height:100px;
+}
+
+.details {
+  display: block;
+  position: relative;
+  top: -180px;
+  left: 226px;
+}
+
+#items div {
+  height:220px;
 }

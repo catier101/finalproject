@@ -7,6 +7,7 @@ Bundler.require
 
 # import local file to be accessed
 require_relative 'models/userpicks.rb'
+require_relative 'twilio.rb'
 
 class MyApp < Sinatra::Base
 
@@ -18,19 +19,22 @@ class MyApp < Sinatra::Base
     erb :infopage
   end
   
-  get '/check' do
+  post '/check' do
     @picks = UserPicks.new(params[:pick])
+    @info = Info.new(params[:name], params[:number])
+    
     if @picks.pick == "street harassment"
-      @info = Info.new(params[:name], params[:number])
-      erb :streethar
+      @message = "#{@info.name} listed you as an emergency contact. They are currently at risk for street harassment. Please contact or locate them to ensure their safety."
     elsif @picks.pick == "domestic violence"
-      erb :domestic
+      @message = "#{@info.name} listed you as an emergency contact. They are currently at risk for domestic violence. Please contact or locate them to ensure their safety."
     elsif @picks.pick == "rape"
-      erb :rape
+      @message = "#{@info.name} listed you as an emergency contact. They are currently at risk for rape. Please contact or locate them to ensure their safety."
     elsif @picks.pick == "other"
-      erb :other
+      @message = "#{@info.name} listed you as an emergency contact. Please contact or locate them to ensure their safety."
     else
       erb :error
     end
+    send_message(@message, @info.number)
+    erb :index
   end
 end

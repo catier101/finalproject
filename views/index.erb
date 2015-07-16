@@ -9,42 +9,60 @@
  <body>
    <h1>Clothing Police</h1>
    <h3 id="infopage"><a href="infopage">Info Page</a></h3>
-<!--    <form method="POST" action="/success">
-    First Pick:<br>
-    <input type="text" name="pick1" placeholder="first pick goes here">
-    <br>
-    Second Pick:<br>
-    <input type="text" name="pick2" placeholder="second pick goes here">
-    <br>
-     Third Pick:<br>
-    <input type="text" name="pick3" placeholder="third pick goes here">
-    <br><br> -->
    
-    <form action="/check" method="get">
+    <form action="/check" method="post">
      <div id = "items">
        <div id = "dress">
        <img src="images/dress.png" />
       <label for="pick1">Violet Dress</label>
+         <div class = "details">
+           <h5>color: tan</h5>
+           <h5>size: S</h5>
+           <h5>price: $47.00</h5>
+         </div>
+         <div class ="radio">
        <input id="pick1" name="pick" type="radio" value="street harassment" />
+         </div>
        </div>
       <br>
        <div id="shirt">
        <img src="images/shirt.png" />
       <label for="pick2">Sapphire Shirt</label>
+         <div class ="radio">
        <input id="pick2" name="pick" type="radio" value="domestic violence"/>
+         </div>
+         <div class = "details">
+           <h5>color: perriwinkle</h5>
+           <h5>size: S</h5>
+           <h5>price: $25.00</h5>
+         </div>
        </div>
       <br>
        <div id ="skirt">
        <img src="images/skirt.png"/>
        <label for="pick3">Utopia Skirt</label>
+         <div class ="radio">
       <input id="pick3" name="pick" type="radio" value="rape"/>
+         </div>
+         <div class = "details">
+           <h5>color: plaid</h5>
+           <h5>size: S</h5>
+           <h5>price: $32.00</h5>
+         </div>
        </div>
       <br>
        <div id="purse">
        <img src="images/purse.png"/>
        <label for="pick4">Forever Purse</label>
+         <div class ="radio">
       <input id="pick4" name="pick" type="radio" value = "other"/>
+         </div>
        </div>
+       <div class = "details">
+           <h5>color: black</h5>
+           <h5>size: one size</h5>
+           <h5>price: $60.00</h5>
+         </div>
       </div>
       <br>
       Name:<br>
