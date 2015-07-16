@@ -29,10 +29,10 @@ a:visited {
   color:#CC97B2
 }
 
-.radio {
+/* .radio {
   float:right;
   margin:20px;
-}
+} */
 
 label {
   margin:20px;
@@ -51,4 +51,19 @@ label {
 
 #items div {
   height:220px;
+  position:relative;
+}
+
+/* #items input {
+  float: right;
+  display:block;
+  position: relative;
+  right: 50px;
+  padding-top:50px;
+} */
+
+#items input {
+  position:absolute;
+  top:100px;
+  right:50px;
 }
