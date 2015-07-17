@@ -12,10 +12,7 @@ require_relative 'twilio.rb'
 class MyApp < Sinatra::Base
 
   get '/' do # route
-    @dress = Items.new
-    @shirt = Items.new
-    @skirt = Items.new
-    @purse = Items.new
+    @new = Items.new
     erb :index
   end
   
@@ -26,6 +23,7 @@ class MyApp < Sinatra::Base
   post '/check' do
     @picks = UserPicks.new(params[:pick])
     @info = Info.new(params[:name], params[:number])
+    @new = Items.new
     
     if @picks.pick == "street harassment"
       @message = "#{@info.name} listed you as an emergency contact. They are currently at risk for street harassment. Please contact or locate them to ensure their safety."

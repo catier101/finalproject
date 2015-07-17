@@ -13,7 +13,7 @@
      <div id = "items">
        <h3 id="infopage"><a href="infopage">Info Page</a></h3>
        <div id = "dress">
-         <% dress = @dress.dress.sample %>
+         <% dress = @new.dress.sample %>
        <img src="<%= dress['img'] %>" />
          <label for="pick1"><%= dress['name'] %></label>
          <div class = "details">
@@ -25,7 +25,7 @@
        </div>
       <br>
        <div id="shirt">
-         <% shirt = @shirt.shirt.sample %>
+         <% shirt = @new.shirt.sample %>
        <img src="<%= shirt['img'] %>" />
          <label for="pick2"><%= shirt['name'] %></label>
        <input id="pick2" name="pick" type="radio" value="domestic violence"/><br>
@@ -37,7 +37,7 @@
        </div>
       <br>
        <div id ="skirt">
-         <% skirt = @skirt.skirt.sample %>
+         <% skirt = @new.skirt.sample %>
        <img src="<%= skirt['img'] %>"/>
          <label for="pick3"><%= skirt['name'] %></label>
       <input id="pick3" name="pick" type="radio" value="rape"/>
@@ -49,7 +49,7 @@
        </div>
       <br>
        <div id="purse">
-         <% purse = @purse.purse.sample %>
+         <% purse = @new.purse.sample %>
          <img src="<%= purse['img'] %>"/>
          <label for="pick4"><%= purse['name'] %></label>
       <input id="pick4" name="pick" type="radio" value = "other"/>
