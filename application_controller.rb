@@ -12,6 +12,10 @@ require_relative 'twilio.rb'
 class MyApp < Sinatra::Base
 
   get '/' do # route
+    @dress = Items.new
+    @shirt = Items.new
+    @skirt = Items.new
+    @purse = Items.new
     erb :index
   end
   
